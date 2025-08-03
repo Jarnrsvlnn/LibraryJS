@@ -8,11 +8,35 @@
 </head>
 <body>
     <div class="container">
-        <button class="new-book">New Book</button>
+        <button class="create-book">New Book</button>
         <div class="book-container">
 
         </div>
-        
+
+        <dialog>
+            <button class="close-book-form" autofocus>Close</button>
+            <form method="dialog">
+                
+                <label for="book-title">Enter book title</label>
+                <input type="text" name="title" id="book-title">
+                
+                <label for="author-name">Enter author name</label>
+                <input type="text" name="author" id="author-name">
+
+                <label for="page-count">Enter book pages</label>
+                <input type="number" name="pages" id="page-count">
+
+                <label for="has-read">Have you read it</label>
+                <label>
+                    <input type="radio" name="readState" value="yes">
+                </label>
+                <label>
+                    <input type="radio" name="readState" value="no">
+                </label>
+                
+                <button formmethod="dialog" class="add-book">Add Book</button>
+            </form>
+        </dialog>
     </div>
 </body>
 <script src="script.js"></script>

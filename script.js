@@ -1,4 +1,7 @@
-const createBook = document.querySelector(".new-book");
+const createBook = document.querySelector(".create-book");
+const addBook = document.querySelector(".addBook")
+const showForm = document.querySelector("dialog");
+const closeForm = document.querySelector(".close-book-form");
 
 const myLibrary = [ // this is where all the book objects will be stored in
 
@@ -35,7 +38,11 @@ function displayBook() {
 }
 
 createBook.addEventListener('click', () => {
-    addBookToLibrary('Harry Potter', 'J.K Rowling', 300, true)
-    displayBook();
+    showForm.showModal();
 });
+
+closeForm.addEventListener('click', () => {
+    showForm.close();
+});
+
 
